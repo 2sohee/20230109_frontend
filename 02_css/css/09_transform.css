@@ -14,9 +14,12 @@
 
   text-align: center;
   line-height: 100px;
-  transition: 0.25s;
+  transition: transform 1s;
 }
 
+.container.translate {
+  perspective: 500px;
+}
 .container.translate .box:nth-of-type(1):hover {
   transform: translatex(50px);
 }
@@ -26,13 +29,14 @@
 .container.translate .box:nth-of-type(3):hover {
   transform: translate(20px, 20px);
 }
+.container.translate .box.z:hover {
+  transform: translatez(-100px);
+}
 .container.rotate {
   /*  3d 관점이 필요한 컨테이너 요소에 perspective(관점) */
-  perspective: 500px;
+  perspective: 50px;
 }
-.container.rotate .box {
-  /* transform-origin: top center; */
-}
+
 .container.rotate .box:hover {
   transform: rotate(50deg);
 }
@@ -43,16 +47,23 @@
   transform-origin: left;
 }
 .container.rotate .y:hover {
-  transform: rotate(50deg);
+  transform: rotatey(45deg);
+}
+
+.container.scale .boxx {
+  transform-origin: left;
 }
 .container.scale .box.x:hover {
   transform: scalex(90%);
 }
+.container.scale .boxy {
+  transform-origin: bottom;
+}
 .container.scale .box.y:hover {
-  transform: scaley(1.2);
+  transform: scaley(120%);
 }
 .container.scale .box.xy:hover {
-  transform: scale(1.2);
+  transform: scale(120%);
 }
 
 .container.skew .box.x:hover {
@@ -63,4 +74,7 @@
 }
 .container.skew .box.xy:hover {
   transform: skew(20deg);
+}
+.container.complex .box:hover {
+  transform: translate(50px) scale(2) rotate(30deg) skew(20deg);
 }
