@@ -1,0 +1,149 @@
+@font-face {
+  font-family: speedeek;
+  src: url("../asets/fonts/Speedee_K_L.woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: speedeek;
+  src: url("../asets/fonts/Speedee_K_B.woff");
+}
+
+@font-face {
+  font-family: speedeek;
+  src: url("../asets/fonts/Speedee_K_R.woff");
+}
+
+:root {
+  font-size: 10px;
+}
+
+body {
+  font-family: speedeek;
+  font-weight: 700;
+}
+
+header {
+  background-color: #fff;
+}
+
+header .headerwrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1168px;
+  height: 140px;
+  margin: 0 auto;
+}
+
+#gnblist {
+  display: flex;
+}
+
+#gnblist .depth01 {
+  margin-right: 85px;
+  font-size: 2em;
+}
+
+.utill {
+  display: flex;
+}
+
+.utill .utilllist {
+  display: flex;
+}
+
+.utill .utilllist li {
+  width: 80px;
+  height: 36px;
+  line-height: 36px;
+
+  border-radius: 48px;
+
+  text-align: center;
+  font-size: 1.3rem;
+
+  color: #fff;
+}
+
+.utill .utilllist li:nth-child(1) {
+  background-color: #db0007;
+}
+
+.utill .utilllist li:nth-child(2) {
+  margin: 0 4px;
+  background-color: #d87e00;
+}
+
+.utill .utilllist li:nth-child(3) {
+  background-color: #264a36;
+}
+
+.utill .btnsearch {
+  margin-left: 26px;
+  cursor: pointer; /*마우스가 호버됐을 때 손가락 모양으로 바뀜*/
+}
+
+#banner {
+  position: relative;
+}
+
+#banner .slidelist li image {
+  width: 100%;
+}
+
+#banner .btnslide .btn {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  cursor: pointer;
+}
+
+#banner .btnslide .btn.prev {
+  background: url("../asets/images/bg_swiper_new.png") 0 0 no-repeat;
+
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+#banner .btnslide .btn.next {
+  background: url("../asets/images/bg_swiper_new.png") 0 -90px no-repeat;
+  right: 0;
+
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+#banner .controls {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+#banner .controls .btnplay {
+  width: 36px;
+  height: 36px;
+  top: 50%;
+  left: 0;
+  background-color: black;
+  background: url("../asets/images/bg_swiper_new.png") -92px 0 no-repeat;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+#banner .controls .btnplay:hover {
+  background-position-y: -36px;
+}
+
+#banner .controls .statusbar {
+  width: 300px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 6px;
+}
