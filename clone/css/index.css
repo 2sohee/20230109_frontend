@@ -25,24 +25,98 @@ body {
 
 header {
   background-color: #fff;
+  position: relative;
+  z-index: 10000;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1168px;
 }
 
 header .headerwrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 1168px;
-  height: 140px;
-  margin: 0 auto;
+
+  min-height: 140px;
 }
 
 #gnblist {
   display: flex;
+  height: 141px;
+  /* 임시 */
+}
+
+#gnblist:hover::after {
+  display: block;
+  border-top: 1px solid #ccc;
+}
+
+#gnblist::after {
+  display: none;
+  content: "";
+  height: 300px;
+  width: 100%;
+  background-color: #fff;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: -1;
 }
 
 #gnblist .depth01 {
-  margin-right: 85px;
   font-size: 2em;
+}
+
+#gnblist .depth01 > a {
+  display: flex;
+  align-items: center;
+  margin-right: 85px;
+  height: 100px;
+}
+
+#gnblist:hover .depth01 > ul {
+  display: block;
+  margin-top: 1px;
+}
+
+#gnblist .depth01 > ul {
+  display: none;
+  background-color: #fff;
+}
+
+#gnblist .depth01 > ul li {
+  padding: 20px 0;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #999;
+}
+#gnblist .depth01 > ul li a {
+  padding: 5px 0;
+}
+#gnblist .depth01 > a {
+  position: relative;
+}
+
+#gnblist .depth01 > ul li a:hover {
+  color: #000;
+  border-bottom: 1px solid black;
+}
+
+#gnblist .depth01 > a::after {
+  display: none;
+}
+
+#gnblist .depth01:hover > a::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 5px;
+  background-color: #ffff00;
+  position: absolute;
+  bottom: 0;
 }
 
 .utill {
@@ -146,4 +220,148 @@ header .headerwrapper {
   height: 5px;
   background-color: #fff;
   border-radius: 6px;
+}
+
+#live .livewrapper {
+  padding: 20px 0;
+}
+
+#live .livewrapper .title {
+  font-size: 4rem;
+}
+
+#live .livewrapper .eventlist {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: calc((1168px - (366px * 3)) / 2);
+  margin-top: 60px;
+}
+#live .livewrapper .eventlist li {
+  border-radius: 10px;
+  overflow: hidden;
+  height: 438px;
+
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+}
+
+#live .livewrapper .eventlist li .contentbox {
+  padding: 15px;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+footer {
+  background-color: #292929;
+}
+
+footer .footerwrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 45px 0 55px;
+}
+
+footer .footerwrapper .footerleft {
+  display: flex;
+  font-size: 1.4rem;
+}
+
+footer .footerwrapper .linklist {
+  width: 190px;
+  color: #fff;
+  font-weight: 500;
+}
+
+footer .footerwrapper .linklist li:nth-child(1) {
+  color: #ffff00;
+}
+footer .footerwrapper .footerleft li + li {
+  margin-top: 10px;
+}
+
+footer .footerleft .infolist {
+  font-weight: 400;
+  color: #999;
+}
+
+footer .footerright .snslist {
+  display: flex;
+  align-items: center;
+}
+
+footer .footerright .snslist li + li {
+  margin-left: 20px;
+}
+
+footer .footerright .snslist li a {
+  display: block;
+
+  width: 40px;
+  height: 40px;
+  background-image: url(../asets/images/sns.png) no-repeat;
+}
+
+footer .footerright .snslist li:nth-child(2) a {
+  background-position-y: -40px;
+}
+
+footer .footerright .snslist li:nth-child(3) a {
+  background-position-y: -80px;
+}
+
+footer .footerright .snslist li:nth-child(4) a {
+  background-position-y: -120px;
+}
+footer .footerright .snslist li:nth-child(5) a {
+  width: auto;
+  height: auto;
+  background: none;
+}
+footer .footerright .snslist li:nth-child(5) img {
+  height: 70px;
+}
+
+.sidebtns {
+  position: fixed;
+  right: 30px;
+  bottom: 400px;
+}
+.sidebtns ul li {
+  text-align: center;
+}
+
+.sidebtns ul li + li {
+  margin-top: 20px;
+}
+.sidebtns ul li a {
+  display: block;
+  width: 121px;
+  height: 121px;
+}
+
+.sidebtns ul li:nth-child(1) a {
+  background: url(../asets/images/btn_story_04.png) center no-repeat;
+}
+
+.sidebtns ul li:nth-child(2) a {
+  background: url(../asets/images/btn_delivery_04.png) center no-repeat;
+}
+
+.sidebtns ul li:nth-child(3) a {
+  background: url(../asets/images/btn_top_04.png) center no-repeat;
+}
+@media (max-width: 1168px) {
+  #live .livewrapper {
+    max-width: 768px;
+  }
+}
+
+#live .livewrapper .title {
+  text-align: center;
+}
+
+@media (max-width: 790px) {
+  #live .livewrapper .eventlist {
+    justify-content: center;
+  }
 }
