@@ -49,12 +49,12 @@ console.log(1 == "1"); //동등 연산자를 사용하면 숫자 1과 문자열 
 console.log(1 == true); //동등 연산자는 암묵적 형변환을 한다.
 
 //일치 연산자 : 값과 데이터 타입 비교.
-console.log(1 === "1");
-console.log(1 === "true");
+console.log(1 === "1"); //false
+console.log(1 === "true"); //false
 
 //부동등, 불일치 => 동등, 일치의 반대
-console.log(1 != "1"); //두 값이 같지 않은지
-console.log(1 !== "1"); // 두 값이 같지 않은지 (타입 포함)
+console.log(1 != "1"); //두 값이 같지 않은지 false
+console.log(1 !== "1"); // 두 값이 같지 않은지 (타입 포함) true
 
 //대소 관계 비교 : 좌항과 우항의 대소 관계를 비교 => 논리값 반환
 var num04 = 4;
