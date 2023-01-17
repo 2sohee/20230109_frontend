@@ -129,7 +129,7 @@ if (num % 2 === 0) isEven = "짝수";
 else isEven = "홀수";
 
 // 위에 식을 삼항연산자로 작성
-var isOdd = num % 2 === 0 ? "짝수" : "홀수";
+var isOdd = num % 2 !== 0 ? "홀수" : "짝수";
 console.log(isOdd);
 
 /* 
