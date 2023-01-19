@@ -1,0 +1,30 @@
+* {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  border: 3px solid black;
+  height: 70px;
+  width: 800px;
+}
+
+.box {
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+  float: left;
+  background-color: red;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+}
+
+.gnbList {
+  color: red;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+}

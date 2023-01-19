@@ -73,13 +73,12 @@
         divElem.appendChild(boxElem);
       }
 
-      // 부모노드.removeChild() : 인자로 전달된 자식 노드를 삭제한다. 삭제된 노드를 반환한다.
-      let removedChild = document.body.removeChild(divElem);
-      //   document.body.innerHTML = "";
-
-      // 노드.revmove() : 노드를 삭제한다.
-      divElem.remove();
+      //부모 노드 .removeChild() : 인자로 전달된 자식 노드를 삭제한다. 삭제된 노드를 반환한다.
+      document.body.removeChild(divElem);
+      // document.body.innerHTML = "";
       console.log(divElem);
+      //노드 .remove() : 노드를 삭제한다.
+      divElem.remove();
 
       /* 
         innerHTML 주의 사항
