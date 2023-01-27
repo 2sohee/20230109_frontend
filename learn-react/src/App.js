@@ -1,16 +1,7 @@
-import Hello from "./components/Hello";
+import Todos from "./components/todos/Todos";
 
 function App() {
-  return (
-    <>
-      <Hello title="React" color="yellow" />
-      <Hello title="이소희" color="green" />
-      <Hello>
-        {/* props.children으로 전달 */}
-        <p>자식요소 입니다.</p>
-      </Hello>
-    </>
-  );
+  return <Todos />;
 }
 
 export default App;
