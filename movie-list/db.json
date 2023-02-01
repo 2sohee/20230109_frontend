@@ -1,24 +1,56 @@
 {
   "todos": [
     {
-      "id": 1,
-      "text": "API 연동 연습하기",
-      "done": true
-    },
-    {
       "id": 2,
       "text": "TMDB 가입하기",
       "done": false
     },
     {
-      "id": 3,
-      "text": "리액트 라우터 배우기",
-      "done": false
+      "text": "ㅁㄴㅇㄴㅁㅇasdadㄴㅁ",
+      "done": false,
+      "id": 7
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "React Router",
+      "body": "글 내용입니다..."
     },
     {
-      "text": "ㅎㅎㅎ",
-      "done": false,
+      "title": "테스트",
+      "body": "글이 잘 작성되나 확인해봅니다.",
+      "id": 2
+    },
+    {
+      "title": "이동 테스트",
+      "body": "이동이 잘 될까요",
+      "id": 3
+    },
+    {
+      "title": "ㄴㅁㅇㄴㅁㅇ",
+      "body": "ㅁㄴㅇㅁㄴㅇ",
       "id": 4
+    },
+    {
+      "title": "",
+      "body": "",
+      "id": 5
+    },
+    {
+      "title": "d",
+      "body": "d",
+      "id": 6
+    },
+    {
+      "title": "ddddd",
+      "body": "sssss",
+      "id": 7
+    },
+    {
+      "title": "sssssss",
+      "body": "ssssss",
+      "id": 8
     }
   ]
 }
