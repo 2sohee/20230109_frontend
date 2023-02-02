@@ -14,7 +14,7 @@ function Header() {
               <Link to="movie">영화</Link>
             </li>
             <li>
-              <Link to="tv">Tv프로그램</Link>
+              <Link to="tv">TV프로그램</Link>
             </li>
             <li>
               <Link to="person">인물</Link>
@@ -32,12 +32,13 @@ const Container = styled.div`
 
 const Wrapper = styled.div`
   display: flex;
-  align-items: center;
-  max-width: 900;
-  height: 60px;
+  max-width: 900px;
 
   margin: 0 auto;
   background-color: #eee;
+  h1 {
+    line-height: 60px;
+  }
 `;
 
 const NavBar = styled.nav`
@@ -46,6 +47,9 @@ const NavBar = styled.nav`
 
 const GnbList = styled.ul`
   display: flex;
+  align-items: center;
+
+  height: 60px;
   li + li {
     margin-left: 20px;
   }

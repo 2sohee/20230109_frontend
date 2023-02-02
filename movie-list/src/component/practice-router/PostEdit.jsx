@@ -3,10 +3,11 @@ import { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 
 function PostEdit() {
-  //경로에 qury string 값을 쉽게 가져올 수 있다.
-  const [serchParams] = useSearchParams();
+  // 경로에 Query String 값을 쉽게 가져올 수 있다.
+  const [searchParams] = useSearchParams();
 
-  const postId = serchParams.get("postId");
+  const postId = searchParams.get("postId");
+
   const [inputs, setInputs] = useState({
     title: "",
     body: "",
@@ -36,14 +37,14 @@ function PostEdit() {
   };
 
   useEffect(() => {
+    // postId가 있으면 inputs 기존 게시물 제목, 내용 inputs에 업데이트
     if (postId) {
-      axios.get("http://localhost:5000/posts" + postId).then((res) => {
-        console.log(res);
+      axios.get("http://localhost:5000/posts/" + postId).then((res) => {
         const { data } = res;
         setInputs({ title: data.title, body: data.body });
       });
     }
-  }, []);
+  }, [postId]);
 
   return (
     <div>
