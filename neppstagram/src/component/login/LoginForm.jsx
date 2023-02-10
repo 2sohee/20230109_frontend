@@ -1,7 +1,9 @@
-import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { Link, redirect, useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { signIn } from "../../api/auth";
+import { getCurrentUser, signIn } from "../../api/auth";
+import { fetchUser } from "../../redux/user";
 import Button from "../common/Button";
 import Input from "../common/Input";
 
@@ -13,6 +15,7 @@ function LoginForm() {
   });
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleInputs = (e) => {
     const { name, value } = e.target;
@@ -24,17 +27,14 @@ function LoginForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = await signIn(inputs);
-
-    if (data.success) {
-      navigate("/home");
-    }
+    await signIn(inputs);
+    dispatch(fetchUser());
   };
 
   return (
     <Container>
+      <h2>Login</h2>
       <form onSubmit={handleSubmit}>
-        <h2>Login</h2>
         <Input
           type="email"
           value={inputs.email}
@@ -50,8 +50,10 @@ function LoginForm() {
           placeholder="비밀번호를 입력하세요"
         />
         <BtnBox>
-          <Button text="Login" />
-          <Button text={<Link to="/signup">SingUp</Link>} />
+          <Button>Login</Button>
+          <Button type="button" onClick={() => navigate("/signup")}>
+            Signup
+          </Button>
         </BtnBox>
       </form>
     </Container>

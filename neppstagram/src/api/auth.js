@@ -6,6 +6,8 @@ const authAxios = axios.create({
 
 const token = localStorage.getItem("access-token");
 
+console.log(token);
+
 if (token) {
   authAxios.defaults.headers.Authorization = `Bearer ${token}`;
 }
@@ -40,5 +42,11 @@ export const signIn = async (form) => {
 export const getCurrentUser = async () => {
   let { data } = await authAxios.get("/users/current");
 
-  console.log(data);
+  return data;
+};
+
+export const patchProfile = async (form) => {
+  let { data } = await authAxios.patch("/users/profile", form);
+
+  return data;
 };

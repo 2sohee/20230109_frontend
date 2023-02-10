@@ -1,10 +1,10 @@
+import { Outlet } from "react-router";
 import styled from "styled-components";
-import ProfileBox from "../profile/ProfileBox";
 
-function Profile() {
+function Post() {
   return (
     <Container>
-      <ProfileBox />
+      <Outlet />
     </Container>
   );
 }
@@ -13,4 +13,4 @@ const Container = styled.div`
   width: 100%;
 `;
 
-export default Profile;
+export default Post;
