@@ -1,0 +1,593 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+ul,
+li,
+button {
+  all: unset;
+}
+
+.wrap {
+  background: #f8f8f8;
+  font-family: "Nanum Gothic", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 상단 네비 -----------------------------------------------------------*/
+
+.upper-container {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 998;
+}
+
+.header-logo a {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+
+.header-item a img {
+  width: 2rem;
+  height: auto;
+  cursor: pointer;
+  padding: 0 0.5rem;
+}
+
+#hambuger-icon img {
+  width: 1.5rem;
+  height: auto;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+/* 네비 활성화 -----------------------------------------------------------*/
+#nav-container {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  background-color: #fff;
+  z-index: 999;
+  font-family: "Nanum Gothic", sans-serif;
+  transition: 0.4s ease;
+}
+
+.nav-upper {
+  margin: 0;
+}
+
+.nav-upeer__item {
+  padding: 1rem 1rem;
+}
+
+.nav-upeer__item h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 900;
+  color: #686868;
+}
+
+.nav-upeer__item p {
+  font-size: 0.7rem;
+  color: #737373;
+}
+
+.nav-upper ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+}
+
+.nav-upper ul li {
+  width: 50%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  background-color: #1d293f;
+  color: #fff;
+  font-size: 0.7rem;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.nav-upper ul li:last-child {
+  background-color: #fff;
+  color: #333;
+}
+
+.nav-lower ul {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.nav-lower ul li {
+  width: 100%;
+  height: 45px;
+  border-bottom: 1px solid #ddd;
+  line-height: 45px;
+  padding: 0 1rem;
+  color: #5c5c5c;
+  font-weight: 600;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+#closeBt {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #5c5c5c;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* 메인 이미지 영역 -----------------------------------------------------------*/
+
+@keyframes blink-effect {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.opacity-img {
+  position: relative;
+}
+
+.opacity-upper {
+  width: 100%;
+  height: auto;
+  max-height: 960px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 997;
+  opacity: 1;
+  animation: blink-effect 12s infinite;
+}
+
+.opacity-lower {
+  width: 100%;
+  height: auto;
+  max-height: 960px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  z-index: 995;
+}
+
+.plastic {
+  background: url("https://www.plasta.co.kr/images/mv_plastic.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  cursor: pointer;
+}
+
+.plastic.next {
+  background: url("https://www.plasta.co.kr/images/mv_plastic2.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  cursor: pointer;
+}
+
+.plastic a,
+.metal a {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  color: #fff;
+  font-size: 1rem;
+  font-family: "Nanum Gothic", sans-serif;
+  letter-spacing: 0.2rem;
+  font-weight: bold;
+}
+
+.plastic a p::after {
+  content: "\f054";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 2.5rem;
+  vertical-align: middle;
+  padding: 0 1rem;
+}
+
+.metal {
+  background: url("https://www.plasta.co.kr/images/mv_metal.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  cursor: pointer;
+}
+
+.metal.next {
+  background: url("https://www.plasta.co.kr/images/mv_metal2.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  cursor: pointer;
+}
+
+.metal a {
+  left: 0;
+}
+
+.metal a p::before {
+  content: "\f053";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 2.5rem;
+  vertical-align: middle;
+  padding: 0 1rem;
+}
+
+/* 신상 정보----------------------------------------------------------------- */
+.new-collection {
+  overflow: hidden;
+  padding: 5rem 0;
+  background-color: #c8aa9a;
+  width: 100%;
+  text-align: center;
+  font-family: "Nanum Gothic", sans-serif;
+  letter-spacing: 0.3rem;
+}
+
+.new-collection__tit {
+  color: #000;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.new-collection__more {
+  color: rgba(29, 41, 63, 0.3);
+  font-size: 0.8rem;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.75rem;
+  margin-bottom: 2.2rem;
+}
+
+.collection-container {
+  width: 100%;
+  max-width: 975px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.collection__list {
+  display: flex;
+  position: relative;
+}
+
+.collection__item img {
+  max-width: 975px;
+  width: 100vw;
+  vertical-align: bottom;
+}
+
+/* 브랜드 소개 ------------------------------------------------------------------*/
+.plasta-about {
+  position: relative;
+  color: #e8cec1;
+  background: url("https://images.velog.io/images/duboo/post/f8690763-89e0-44c2-8149-1ae37fc58c4d/image.png")
+    no-repeat right top;
+  background-size: 100% auto;
+  padding-top: 60vw;
+  overflow: hidden;
+}
+
+.plasta-about h3 {
+  position: absolute;
+  left: 0;
+  top: 8%;
+  font-weight: 500;
+  color: #c8aa9a;
+  padding-left: 50px;
+  letter-spacing: 0.4rem;
+  font-size: 1rem;
+}
+
+.plasta-about h3::before {
+  content: "";
+  width: 40px;
+  height: 1px;
+  background: #c8aa9a;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: 0.2rem;
+}
+
+.plasta-about__text {
+  width: 100%;
+  vertical-align: middle;
+  text-align: center;
+  background-color: rgb(29, 41, 63);
+  padding: 8rem 0;
+}
+
+.plasta-about__text h4 {
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.2rem;
+}
+
+.plasta-about__text h4 span {
+  display: inline-block;
+  width: 135px;
+  border-bottom: 2px solid #e8cec1;
+  margin-left: -0.2rem;
+  margin-right: 0.5rem;
+}
+
+.plasta-about__text p {
+  margin-top: 2.5rem;
+  line-height: 2.2rem;
+  font-size: 0.9rem;
+}
+
+/* 브랜드 소개 영역 -------------------------------------------------------*/
+.brand-story {
+  background: url("https://images.velog.io/images/duboo/post/4d03e92d-3755-4edb-8aee-c600c193ef22/image.png")
+    no-repeat center;
+  background-size: cover;
+  padding: 8% 0;
+  text-align: center;
+  color: #e8cec1;
+}
+
+.brand-story p {
+  margin: 2rem 0;
+  font-size: 0.9rem;
+  line-height: 2.2rem;
+  font-weight: 300;
+}
+
+.brand-story a {
+  color: #f0dace;
+  border: 1px solid #f0dace;
+  display: inline-block;
+  line-height: 3em;
+  width: 200px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.3rem;
+  cursor: pointer;
+}
+
+/* 베스트 아이템 영역 */
+.best-container {
+  width: 100%;
+  padding: 8% 0;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.best-container > h3 {
+  font-weight: 600;
+  letter-spacing: 0.3rem;
+  font-size: 1rem;
+}
+
+.best-items {
+  width: 90%;
+  display: flex;
+  padding: 5% 0;
+}
+
+.best-list {
+  width: 100000px;
+  display: flex;
+  overflow-x: auto;
+  transition: 0.5s;
+  position: relative;
+  left: -0.25rem;
+}
+
+.best-list::-webkit-scrollbar {
+  display: none;
+}
+
+.best-item {
+  transition: 0.5s;
+  min-width: calc(50% - 1rem);
+  margin: 0 0.5rem;
+}
+
+.best-item img {
+  max-width: none;
+  width: 100%;
+}
+
+.best-item__info {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.best-item__tit {
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+
+.best-item__cost {
+  font-size: 0.7rem;
+}
+
+.prevBt,
+.nextBt {
+  width: 40px;
+  height: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  position: absolute;
+  z-index: 99;
+}
+
+.prevBt {
+  background-image: url("https://www.plasta.co.kr/images/arrow_prev.png");
+  left: 0.2rem;
+}
+
+.nextBt {
+  background-image: url("https://www.plasta.co.kr/images/arrow_next.png");
+  right: 0.2rem;
+}
+
+/* 플라스틱, 메탈 아이템 영역 ----------------------------------------------------------- */
+.plastic-item,
+.metal-item {
+  display: flex;
+  flex-direction: column;
+  background: #f8f8f8;
+  text-align: center;
+}
+
+.plastic-item .img {
+  background: url("https://images.velog.io/images/duboo/post/c730404e-a552-440d-9590-1c080d0c8c60/image.png")
+    no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 50vw;
+}
+
+.metal-item .img {
+  background: url("https://www.plasta.co.kr/images/metal_item.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 50vw;
+}
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 2% 2%;
+}
+
+.tit h3 {
+  margin-bottom: 1rem;
+  letter-spacing: 0.4rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.tit a {
+  color: rgba(24, 27, 32, 0.3);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.25rem;
+  display: inline-block;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.list {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.card {
+  cursor: pointer;
+  width: calc(50% - 10px);
+  margin: 0 5px 20px;
+}
+
+.card a img {
+  vertical-align: bottom;
+  border: 1px solid #f2eded;
+  max-width: 100%;
+}
+
+.name {
+  color: #5c5c5c;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  margin: 1.2rem 0 0.3rem;
+}
+
+.cost {
+  font-weight: 900;
+  font-size: 0.8rem;
+}
+
+/* 하단 이미지 영역 */
+.footer-img {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+
+.footer-img img {
+  width: 100%;
+}

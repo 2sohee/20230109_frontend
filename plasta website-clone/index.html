@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pla_sta</title>
+
+    <!-- 구글 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- 폰트 어썸 -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- 리셋 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/reseter.css/2.0.0/minireseter.min.css"
+      integrity="sha512-26lCJWeu4qh1Kd3YpqH03s+Ju7qI9mqz48E8mPE/qIoucLUbkBx6oayTM+0T3mAdC1DdT1grtnFtJNwsB+8qzw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 전체 -->
+    <div class="wrap">
+      <!-- 상단 네비 -->
+      <div class="upper-container">
+        <div class="header-logo">
+          <a href="">pla_sta</a>
+        </div>
+        <ul class="header-list">
+          <li class="header-item">
+            <a href="">
+              <img
+                src="https://images.velog.io/images/duboo/post/e894c844-435d-4788-9192-03eb5d4195c1/image.png"
+                alt="로그인 아이콘"
+              />
+            </a>
+          </li>
+          <li class="header-item">
+            <a href="">
+              <img
+                src="https://images.velog.io/images/duboo/post/8a579bb3-01bf-453e-8eb5-c32fb557c24c/image.png"
+                alt="장바구니 아이콘"
+              />
+            </a>
+          </li>
+          <li id="hambuger-icon" class="header-item">
+            <img
+              src="https://images.velog.io/images/duboo/post/1f95c69b-24bb-400b-86e1-0883192a7eaa/image.png"
+              alt="햄버거 메뉴 아이콘"
+            />
+          </li>
+        </ul>
+      </div>
+
+      <!-- 클릭 네비 활성화 -->
+      <div id="nav-container">
+        <div class="nav-upper">
+          <div class="nav-upeer__item">
+            <h2>Welcome</h2>
+            <p>로그인을 하시면 더 많은 혜택을<br />받으실 수 있습니다.</p>
+          </div>
+          <button><i id="closeBt" class="fas fa-times"></i></button>
+          <ul>
+            <li><a href="">회원가입</a></li>
+            <li><a href="">로그인</a></li>
+          </ul>
+        </div>
+        <nav class="nav-lower">
+          <ul>
+            <li><a href="">Brand Story</a></li>
+            <li><a href="">SHOP</a></li>
+            <li><a href="">브랜드북</a></li>
+            <li><a href="">E-Catalog</a></li>
+            <li><a href="">image</a></li>
+            <li><a href="">movie</a></li>
+            <li><a href="">회사소개</a></li>
+            <li><a href="">고객센터</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- 상단 메인 페이지 이미지 -->
+      <main class="opacity-img">
+        <section class="opacity-upper">
+          <div class="plastic">
+            <a href="">
+              <p>PLASTIC</p>
+            </a>
+          </div>
+          <div class="metal">
+            <a href="">
+              <p>METAL</p>
+            </a>
+          </div>
+        </section>
+        <section class="opacity-lower">
+          <div class="plastic next">
+            <a href="">
+              <p>PLASTIC</p>
+            </a>
+          </div>
+          <div class="metal next">
+            <a href="">
+              <p>METAL</p>
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <!-- 신상 정보 -->
+      <section class="new-collection">
+        <h3 class="new-collection__tit">2021 F/W COLLECTION</h3>
+        <a href="" class="new-collection__more">VIEW MORE</a>
+        <div class="collection-container">
+          <ul class="collection__list">
+            <li class="collection__item">
+              <img
+                src="https://images.velog.io/images/duboo/post/6b0bee55-8669-416d-b81d-fc1051f687ba/image.png"
+                alt="신상 이미지"
+              />
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 브랜드 소개 영역 -->
+      <section class="plasta-about">
+        <h3>ABOUT PLASTA</h3>
+        <div class="plasta-about__text">
+          <h4>Play with<span></span>Stay in</h4>
+          <p>
+            PLASTA의 고유하고 다채로운 컬러로<br />
+            어떤 스타일에도 자연스럽게 어우러지는<br />
+            당신만의 스타일을 찾아보세요.
+          </p>
+          <p>
+            PLASTA만의 고유한 기술은 일상에서<br />
+            늘 편안하고 튼튼하게<br />
+            오랜 기간 함께 할수록 진가를 발휘할 겁니다.
+          </p>
+        </div>
+      </section>
+
+      <!-- 베스트 아이템 슬라이드 영역 -->
+      <section class="best-container">
+        <h3>BEST ITEMS</h3>
+        <div class="best-items">
+          <ul class="best-list">
+            <li class="best-item">
+              <img
+                src="https://www.plasta.co.kr/data/item/1604560829/thumb-ps113col.82_375x472.jpg"
+                alt="베스트 아이템 이미지"
+              />
+              <div class="best-item__info">
+                <h4 class="best-item__tit">PS-112 Col.82 (L.W. Gray)</h4>
+                <div class="best-item__cost">185,000원</div>
+              </div>
+            </li>
+            <li class="best-item">
+              <img
+                src="https://www.plasta.co.kr/data/item/1626155292/thumb-_MG_8879_375x472.jpg"
+                alt="베스트 아이템 이미지"
+              />
+              <div class="best-item__info">
+                <h4 class="best-item__tit">PS-112 Col.82 (L.W. Gray)</h4>
+                <div class="best-item__cost">185,000원</div>
+              </div>
+            </li>
+            <li class="best-item">
+              <img
+                src="https://www.plasta.co.kr/data/item/1604560829/thumb-ps113col.82_375x472.jpg"
+                alt="베스트 아이템 이미지"
+              />
+              <div class="best-item__info">
+                <h4 class="best-item__tit">PS-112 Col.82 (L.W. Gray)</h4>
+                <div class="best-item__cost">185,000원</div>
+              </div>
+            </li>
+            <li class="best-item">
+              <img
+                src="https://www.plasta.co.kr/data/item/1626155292/thumb-_MG_8879_375x472.jpg"
+                alt="베스트 아이템 이미지"
+              />
+              <div class="best-item__info">
+                <h4 class="best-item__tit">PS-112 Col.82 (L.W. Gray)</h4>
+                <div class="best-item__cost">185,000원</div>
+              </div>
+            </li>
+            <li class="best-item">
+              <img
+                src="https://www.plasta.co.kr/data/item/1604560829/thumb-ps113col.82_375x472.jpg"
+                alt="베스트 아이템 이미지"
+              />
+              <div class="best-item__info">
+                <h4 class="best-item__tit">PS-112 Col.82 (L.W. Gray)</h4>
+                <div class="best-item__cost">185,000원</div>
+              </div>
+            </li>
+            <li class="best-item">
+              <img
+                src="https://www.plasta.co.kr/data/item/1626155292/thumb-_MG_8879_375x472.jpg"
+                alt="베스트 아이템 이미지"
+              />
+              <div class="best-item__info">
+                <h4 class="best-item__tit">PS-112 Col.82 (L.W. Gray)</h4>
+                <div class="best-item__cost">185,000원</div>
+              </div>
+            </li>
+            <li class="best-item">
+              <img
+                src="https://www.plasta.co.kr/data/item/1604560829/thumb-ps113col.82_375x472.jpg"
+                alt="베스트 아이템 이미지"
+              />
+              <div class="best-item__info">
+                <h4 class="best-item__tit">PS-112 Col.82 (L.W. Gray)</h4>
+                <div class="best-item__cost">185,000원</div>
+              </div>
+            </li>
+            <li class="best-item">
+              <img
+                src="https://www.plasta.co.kr/data/item/1604560829/thumb-ps113col.82_375x472.jpg"
+                alt="베스트 아이템 이미지"
+              />
+              <div class="best-item__info">
+                <h4 class="best-item__tit">PS-112 Col.82 (L.W. Gray)</h4>
+                <div class="best-item__cost">185,000원</div>
+              </div>
+            </li>
+            <li class="best-item">
+              <img
+                src="https://www.plasta.co.kr/data/item/1604560829/thumb-ps113col.82_375x472.jpg"
+                alt="베스트 아이템 이미지"
+              />
+              <div class="best-item__info">
+                <h4 class="best-item__tit">PS-112 Col.82 (L.W. Gray)</h4>
+                <div class="best-item__cost">185,000원</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <a id="prev" class="control prevBt"></a>
+        <a id="next" class="control nextBt"></a>
+      </section>
+
+      <!-- 브랜드 스토리 영역 -->
+      <section class="brand-story">
+        <img
+          src="https://images.velog.io/images/duboo/post/ec4e50ed-d92a-4870-94c9-944ff5797b68/image.png"
+          alt="브랜드 스토리 이미지"
+        />
+        <p>
+          선택의 즐거움과 완성되는 스타일로 play with us<br />
+          매 순간 당신이 당신다울 수 있도록 stay in you
+        </p>
+        <a href="">BRAND STORY</a>
+      </section>
+
+      <!-- 플라스틱 아이템 영역 -->
+      <section class="plastic-item">
+        <div class="img"></div>
+        <div class="container">
+          <div class="tit">
+            <h3>PLASTIC ITEM</h3>
+            <a href="">VIEW MORE</a>
+          </div>
+          <ul class="list">
+            <li class="card">
+              <a href="">
+                <img
+                  src="https://www.plasta.co.kr/data/item/1604560798/thumb-ps112mcol.82_286x360.jpg"
+                  alt="플라스틱 안경 이미지1"
+                />
+                <div class="name">PS-116 Col.8 (Khaki Gray)</div>
+                <div class="cost">165,000원</div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="">
+                <img
+                  src="https://www.plasta.co.kr/data/item/1604560797/thumb-ps112mcol.31_286x360.jpg"
+                  alt="플라스틱 안경 이미지2"
+                />
+                <div class="name">PS-116 Col.34 (Red Pink)</div>
+                <div class="cost">165,000원</div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="">
+                <img
+                  src="https://www.plasta.co.kr/data/item/1604560796/thumb-ps112mcol.2_286x360.jpg"
+                  alt="플라스틱 안경 이미지3"
+                />
+                <div class="name">PS-116 Col.31 (Red Bean)</div>
+                <div class="cost">165,000원</div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="">
+                <img
+                  src="https://www.plasta.co.kr/data/item/1604560795/thumb-ps112mcol.1_286x360.jpg"
+                  alt="플라스틱 안경 이미지4"
+                />
+                <div class="name">PS-116 Col.24 (Demi Brown)</div>
+                <div class="cost">165,000원</div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 메탈 아이템 영역 -->
+      <section class="metal-item">
+        <div class="img"></div>
+        <div class="container">
+          <div class="tit">
+            <h3>METAL ITEM</h3>
+            <a href="">VIEW MORE</a>
+          </div>
+          <ul class="list">
+            <li class="card">
+              <a href="">
+                <img
+                  src="https://images.velog.io/images/duboo/post/ed973a2c-99e7-44fe-9dfb-ea91acc8fc04/image.png"
+                  alt="플라스틱 안경 이미지1"
+                />
+                <div class="name">PS-112M Col.82 (L. W. Gray)</div>
+                <div class="cost">185,000원</div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="">
+                <img
+                  src="https://www.plasta.co.kr/data/item/1604560765/thumb-ps116col.34_286x360.jpg"
+                  alt="플라스틱 안경 이미지2"
+                />
+                <div class="name">PS-112M Col.31 (Red Bean)</div>
+                <div class="cost">185,000원</div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="">
+                <img
+                  src="https://www.plasta.co.kr/data/item/1604560764/thumb-ps116col.31_286x360.jpg"
+                  alt="플라스틱 안경 이미지3"
+                />
+                <div class="name">PS-112M Col.2 (Brown)</div>
+                <div class="cost">185,000원</div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="">
+                <img
+                  src="https://www.plasta.co.kr/data/item/1604560763/thumb-ps116col.24_286x360.jpg"
+                  alt="플라스틱 안경 이미지4"
+                />
+                <div class="name">PS-112M Col.1 (Black)</div>
+                <div class="cost">185,000원</div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- 하단 이미지 영역 -->
+      <section class="footer-img">
+        <img
+          src="https://www.plasta.co.kr/images/bt_img1.png"
+          alt="하단 브랜드 이미지1"
+          class="footer-img__upper"
+        />
+        <img
+          src="https://www.plasta.co.kr/images/bt_img2.png"
+          alt="하단 브랜드 이미지2"
+          class="footer-img__lower"
+        />
+      </section>
+
+      <!-- 하단 영역 -->
+      <footer class="footer-container">
+        <div class="footer-upper">
+          <h1>
+            <a href="">pla_sta</a>
+          </h1>
+          <div class="footer-upper__info">
+            <p>상호명 : 주식회사 클론코딩</p>
+            <p>대표 : 홍길동</p>
+            <address>주소 : 대한민국</address>
+            <p>사업자 등록번호 : 123-12-12341</p>
+            <p>대표번호 : 012-123-1234</p>
+            <p>팩스번호 : 012-123-1234</p>
+            <p>메일 : clone@coding.com</p>
+            <p>COPYRIGHT © All RIGHTS RESERVED.</p>
+          </div>
+        </div>
+        <ul class="footer-lower">
+          <li><a href="">회사소개</a></li>
+          <li><a href="">개인정보처리</a></li>
+          <li><a href="">이용약관</a></li>
+        </ul>
+        <button class="backToTop"></button>
+      </footer>
+
+      <!-- 팝업 창 -->
+      <div class="popUp-container">
+        <span class="close-pop"></span>
+        <p class="popUp-tit">Plasta_Movie</p>
+        <div>
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/bBzR2i6YYgM"
+          >
+          </iframe>
+          <a href="" class="btn_more">More View +</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
