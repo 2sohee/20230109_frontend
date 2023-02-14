@@ -10,12 +10,10 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
 li {
   list-style: none;
 }
-
-.clearFix::after {
+.clearfix::after {
   content: "";
   display: block;
   clear: both;
@@ -25,23 +23,24 @@ h1 {
   position: absolute;
   height: 40px;
   line-height: 40px;
-  left: 20px;
+  margin-left: 20px;
 }
 
-#gnbList {
+#gnblist {
   width: 240px;
   margin: 0 auto;
+  background-color: #ddd;
 }
 
-#gnbList li {
+#gnblist li {
   float: left;
 }
 
-#gnbList li a:hover {
+#gnblist li:hover a {
   background-color: #eee;
 }
 
-#gnbList li a {
+#gnblist li a {
   display: block;
   width: 80px;
   height: 40px;
@@ -49,45 +48,50 @@ h1 {
   text-align: center;
 }
 
+section {
+  margin: 20px 0px;
+  background-color: #eee;
+}
+
 main {
   padding: 50px 0;
   background-color: #eee;
 }
 
-main .imgList {
+main .imglist {
+  height: 150px;
   width: 320px;
   margin: 0 auto;
 }
-main .imgList li {
+
+main .imglist li {
   float: left;
 }
 
-main .imgList li a {
+main .imglist li a {
   display: block;
   width: 100px;
   height: 150px;
   border: 1px solid #aaa;
-
   background: center / auto 100% no-repeat;
   transition: 0.4s;
 }
 
-main .imgList li:nth-child(1) a {
-  background-image: url("./assets/dog_bg.jpg");
+main .imglist li:nth-child(1) a {
+  background-image: url(./assets/강아지1.jpg);
 }
 
-main .imgList li:nth-child(2) a {
-  background-image: url("./assets/dog_bg02.jpg");
+main .imglist li:nth-child(2) a {
+  background-image: url(./assets/강아지2.jpg);
 }
 
-main .imgList li:nth-child(3) a {
-  background-image: url("./assets/dog_bg03.jpg");
+main .imglist li:nth-child(3) a {
+  background-image: url(./assets/강아지3.jpg);
 }
 
-main .imgList li a:hover {
-  background-size: auto 120%;
-}
-
-main .imgList li + li {
+main .imglist li + li {
   margin-left: 10px;
+}
+main .imglist li a:hover {
+  background-size: auto 120%;
 }

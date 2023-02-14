@@ -10,17 +10,24 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
 li {
   list-style: none;
 }
-
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
 h1 {
   flex-basis: 100px;
   height: 40px;
   line-height: 40px;
 }
 
+#gnblist {
+  display: flex;
+  justify-content: center;
+}
 body {
   padding-top: 40px;
 }
@@ -44,12 +51,7 @@ header {
   z-index: 100;
 }
 
-#gnbList {
-  display: flex;
-  justify-content: center;
-}
-
-#gnbList li a {
+#gnblist li a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,48 +60,44 @@ header {
   text-align: center;
 }
 
-#gnbList li a:hover {
+#gnblist li a:hover {
   background-color: #eee;
 }
 
 main {
-  padding: 50px 0;
   background-color: #eee;
+  padding: 50px 0;
 }
 
-.imgList {
+.imglist {
   display: flex;
   justify-content: center;
 }
 
-.imgList li {
+.imglist li {
   width: 100px;
   height: 150px;
-  border: 1px solid #000;
-  overflow: hidden;
+  border: 1px solid black;
 }
-
-.imgList li + li {
+.imglist li + li {
   margin-left: 10px;
 }
-
-.imgList li a {
+.imglist li a {
   display: flex;
-
+  height: 100%;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
-
-.imgList li a img {
-  height: 150px;
+.imglist li a img {
+  height: 100%;
   transition: 0.4s;
 }
-
-.imgList li a:hover img {
+.imglist li a:hover img {
   transform: scale(1.2);
 }
 
-.sideWrapper {
+.sidewrapper {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -107,145 +105,57 @@ main {
   flex-basis: 100px;
 }
 
-.btnSide {
+@media (max-width: 800px) {
+  #gnblist {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  header:hover {
+    max-height: 200px;
+  }
+
+  header .btnside {
+    display: block;
+  }
+}
+
+.btnside {
   display: none;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 30px;
   height: 30px;
+  /* border: 3px solid black; */
   /* border-radius: 50%; */
 }
 
-.btnSide:hover {
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.btnSide span {
+.btnside span {
   display: block;
-
   width: 20px;
-  height: 2px;
-
+  height: 3px;
   background-color: black;
 }
 
-.btnSide span:nth-child(2) {
+.btnside span:nth-child(2) {
   margin: 5px 0;
 }
 
-.modalBg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.4);
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-}
-
-.modal {
-  display: flex;
-  flex-direction: column;
-  width: 500px;
-  height: 300px;
-  background: #fff;
-}
-
-.modal .contentBox {
-  flex: 1;
-}
-
-.modal h4 {
-  border-bottom: 1px solid #000;
-  padding: 5px;
-}
-p {
-  padding: 5px;
-}
-
-.modalBg.hide {
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.modalBg.hide .modal {
-  transform: translateY(100px);
-  transition: transform 0.3s;
-}
-
-.modal .btnBox {
-  padding: 10px 0;
-  text-align: center;
-}
-
-.modal .btnBox button {
-  border: none;
-  outline: none;
-  padding: 5px 20px;
-
-  background-color: rgb(117, 191, 255);
-  color: #fff;
-  font-weight: 700;
-}
-
-/* 800px보다 작으면 헤더 안보이게 */
-@media (max-width: 800px) {
-  nav.on {
-    transform: translate(-100%);
-    transition: transform 0s 0s;
-    opacity: 1;
-  }
-
-  nav {
-    position: fixed;
-    left: 100%;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.4);
-
-    opacity: 0;
-
-    transition: transform 0s 0.4s, opacity 0.4s;
-    transform: translateX(0);
-  }
-
-  nav.on #gnbList {
-    transform: translateX(0%);
-  }
-
-  #gnbList {
+/* 800보다 작으면 헤더 안보이게 */
+@media (min-width: 800px) {
+  #btnside {
     flex-direction: column;
+    align-items: center;
     justify-content: flex-start;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 200px;
-    height: 100vh;
-
-    background: #fff;
-    transition: transform 0.4s;
-    transform: translateX(100%);
-  }
-
-  #gnbList li a {
-    width: auto;
-    justify-content: flex-start;
-    padding: 0 10px;
-  }
-
-  .btnSide {
-    display: flex;
   }
 }
 
-@keyframes slide {
-  from {
-    transform: translateX(100%);
-  }
+.btnside:hover {
+  max-height: 200px;
+}
+
+header .btnside {
+  display: flex;
 }
