@@ -1,0 +1,37 @@
+body {
+  font: 400 15px "NanumSquare", sans-serif;
+  line-height: 1.8;
+  color: #2c2c2c;
+}
+h2 {
+  font-size: 26px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+h3 {
+  font-size: 21px;
+  line-height: 1.375em;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+h4 {
+  font-size: 19px;
+  line-height: 1.375em;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+.intro-bg {
+  background-color: rgb(210, 232, 252);
+  color: #ffffff;
+}
+.about-bg {
+  background-color: #fdfcf4;
+  color: #2c2c2c;
+}
+.about-bg p {
+  line-height: 2em;
+  font-size: 16px;
+  font-weight: 1.2em;
+}
