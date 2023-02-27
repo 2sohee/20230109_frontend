@@ -1,0 +1,687 @@
+/* mobile first css*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  margin: 0 auto;
+}
+
+/* reset css */
+button,
+ul,
+li,
+a,
+address {
+  all: unset;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+.header {
+  position: relative;
+}
+
+.header-upper {
+  display: none;
+}
+
+.header-midle {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: 99;
+  position: relative;
+}
+
+.desktop-nav {
+  display: none;
+}
+
+.header-icon {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.header-logo__img {
+  width: 95px;
+  height: auto;
+  cursor: pointer;
+}
+
+.header-serch {
+  padding: 0 1rem;
+}
+
+/* 배너 영역 */
+.banner {
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 0;
+  overflow: hidden;
+}
+
+.banner-img {
+  width: 100%;
+  height: auto;
+}
+
+.desktop {
+  display: none;
+}
+
+.banner-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 1.7rem;
+}
+
+.main-container {
+  width: 100%;
+  position: relative;
+  top: 50px;
+  padding: 30px 1rem 0px;
+  margin: 0 auto;
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 0.7rem;
+}
+
+.goods-sort-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.goods-sort select {
+  height: 31px;
+  padding: 5px 25px 5px 10px;
+  color: #626262;
+  border: 1px solid #dbdbdb;
+  background: #fff;
+}
+
+em {
+  color: #b7a17b;
+}
+
+.goods-contaier {
+  display: flex;
+  flex-direction: column;
+}
+
+.goods-contaier:nth-child(3) {
+  display: none;
+}
+
+.goods-box {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.goods-item {
+  width: calc(50% - 2px);
+  margin: 0.5rem 0;
+  position: relative;
+}
+
+.goods-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.2s;
+}
+
+.goods-img:hover {
+  opacity: 1;
+}
+
+.hover-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.goods-info {
+  margin: 0.5rem 0;
+}
+
+.goods-title {
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.nav-goods-page {
+  margin: 2rem 0 7rem;
+}
+
+.nav-page__modile {
+  width: 100%;
+  height: 40px;
+  background: #b0976d;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+.nav-page__desktop {
+  display: none;
+}
+
+.footer-container {
+  width: 100%;
+  padding: 0 1rem;
+  border-top: 1px solid rgb(201, 201, 201);
+}
+
+.footer-upper {
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.footer-row-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.footer-logo__img {
+  width: 120px;
+  height: auto;
+  cursor: pointer;
+}
+
+.footer-upper__bt {
+  width: 170px;
+  height: 50px;
+  border: 1px solid #626262;
+  background: #fff;
+  padding: 1rem;
+  text-align: center;
+  color: #626262;
+  cursor: pointer;
+}
+
+.footer-upper__bt:hover {
+  background: #626262;
+  color: #fff;
+}
+
+.footer-upper-nav {
+  display: none;
+}
+
+.footer-lower {
+  margin: 2rem auto;
+  max-width: 1200px;
+  border-top: 1px solid rgb(201, 201, 201);
+}
+
+.nav-fnd {
+  display: block;
+  margin: 2rem 0;
+}
+
+.nav-fnd li a {
+  font-weight: bold;
+  margin-right: 1rem;
+  color: #626262;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.footer-site-info {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 0.8rem;
+  color: #626262;
+}
+
+.info {
+  margin-bottom: 0.7rem;
+}
+
+.info > div {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.info-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.info-list li {
+  display: block;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.copyright {
+  margin: 2rem 0;
+  color: #626262;
+  font-size: 0.9rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* 모바일 네비게이션 */
+.header-menu__mobile {
+  z-index: 999;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  /* left: 0; */
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  color: #383835;
+}
+
+.menu-upper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.mene-logo {
+  width: 95px;
+  height: auto;
+}
+
+.menu-close {
+  cursor: pointer;
+}
+
+.user-service {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-service span {
+  flex: 1;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+  border-left: 1px solid #dbdbdb;
+  font-size: 0.7rem;
+  font-family: "Nanum Gothic", sans-serif;
+  cursor: pointer;
+}
+
+.nav-mobule {
+  width: 100%;
+}
+
+.nav-mobule__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-mobule__item {
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 2rem);
+  height: 50px;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.nav-mobule__item a {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.nav-mobule__item button {
+  color: #626262;
+  font-size: 0.8rem;
+}
+
+#backToTop {
+  background-color: rgb(126, 126, 126);
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  transition-property: background-color, opacity, visibility;
+  transition-duration: 0.3s, 0.5s, 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999;
+}
+
+#backToTop::after {
+  content: "\f0d8";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+#backToTop.show {
+  opacity: 1;
+  visibility: visible;
+  background-color: rgb(126, 126, 126);
+}
+
+#backToTop.show:hover {
+  cursor: pointer;
+  background-color: rgb(22, 22, 22);
+}
+
+/* 데스크탑 */
+@media screen and (min-width: 1023px) {
+  /* 스크린의 크기가 1023을 넘게된다면 해당 스타일을 적용합니다.
+    테스크탑을 위한 영역입니다. 테스크탑 스크린에만 적용될 css를 작성합니다. */
+
+  .header-upper {
+    display: block;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2.5rem;
+    position: relative;
+    top: 0;
+    left: 0;
+    background: #f0f0f0;
+    letter-spacing: 0.5px;
+  }
+
+  .nav-sns__item {
+    width: 40px;
+    height: 40px;
+    padding: 16px 15px;
+    cursor: pointer;
+  }
+
+  .nav-else__item {
+    padding: 13px 30px;
+    cursor: pointer;
+  }
+
+  .nav-else__item a {
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  .sns-icon {
+    font-size: 13px;
+  }
+
+  .nav-else {
+    font-family: "Nanum Gothic", sans-serif;
+  }
+
+  .header-midle {
+    position: absolute;
+    top: 40px;
+    height: 100px;
+    padding: 0 2.5rem;
+    background: #fff;
+  }
+
+  .desktop-nav {
+    display: block;
+    min-width: 1000px;
+    position: relative;
+  }
+
+  .desktop-nav__item {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0 2.5rem;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .desktop-nav__item:hover {
+  }
+
+  .desktop-nav__item a:hover {
+    color: #b7a17b;
+  }
+
+  .desktop-nav__item:hover .desktop-nav__inner {
+    display: block;
+    position: absolute;
+    top: 22px;
+    left: 0;
+  }
+
+  .desktop-nav__inner {
+    display: none;
+  }
+
+  .desktop-nav__inner:hover {
+    display: block;
+  }
+
+  .desktop-nav__inner a {
+    color: #1b1b1b;
+  }
+
+  .header-menu {
+    display: none;
+  }
+
+  .header-icon {
+    font-size: 18px;
+  }
+
+  .header-logo__img {
+    width: 200px;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .banner {
+    top: 100px;
+  }
+
+  .desktop {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 50%;
+    margin-left: -960px;
+    width: 1920px;
+    height: auto;
+  }
+
+  .banner-title {
+    font-size: 3.3rem;
+  }
+
+  .main-container {
+    max-width: 1200px;
+    top: 100px;
+  }
+
+  .goods-contaier {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .goods-contaier:nth-child(3) {
+    display: flex;
+  }
+
+  .goods-count {
+    font-size: 1rem;
+  }
+
+  .goods-title {
+    font-size: 0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .goods-box {
+    width: calc(50% - 1px);
+  }
+
+  .goods-item {
+    width: calc(50% - 1px);
+  }
+
+  .nav-page__mobile {
+    display: none;
+  }
+
+  .nav-page__desktop {
+    display: flex;
+    margin: 0 auto;
+    width: 400px;
+    height: 40px;
+  }
+
+  .nav-page__desktop li {
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    border-left: 1px solid #dbdbdb;
+    cursor: pointer;
+  }
+
+  .nav-page__desktop li:nth-child(10) {
+    border-right: 1px solid #dbdbdb;
+  }
+
+  .nav-page__desktop li:nth-child(1) {
+    background: #b0976d;
+  }
+
+  .nav-page__desktop li:nth-child(1) a {
+    color: #fff;
+  }
+
+  .nav-goods-page {
+    margin: 3rem 0 16rem;
+  }
+
+  .nav-page__desktop li a {
+    font-size: 0.8rem;
+    color: #626262;
+  }
+
+  .footer-logo__img {
+    width: 220px;
+  }
+
+  .footer-upper-nav {
+    display: block;
+    margin: 1rem 0;
+    border-top: 2px solid #626262;
+  }
+
+  .footer-nav__list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0 10rem;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .footer-nav__list a {
+    display: block;
+    width: 90px;
+    font-weight: 500;
+    border-bottom: 1px solid #626262;
+    padding-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .nav-fnd li a {
+    font-size: 1.1rem;
+  }
+
+  .inner-list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    font-size: 0.8rem;
+    top: 3.5rem;
+    color: gray;
+  }
+
+  .inner-item {
+    margin-bottom: 0.4rem;
+  }
+
+  .footer-site-info {
+    flex-direction: row;
+  }
+
+  .info-list {
+    flex-direction: column;
+  }
+
+  .footer-icons {
+    display: flex;
+    flex-direction: row;
+  }
+}
